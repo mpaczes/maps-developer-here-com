@@ -1,0 +1,84 @@
+<script id="pierwszaZakladka" type="text/html">
+		<h3 class="text-center">
+			Wyszukaj długość i szerokość geograficzną miejsca.
+		</h3>
+		<p class="text-left">
+			W tej zakładce można znaleźć długość i szerkość geograficzną miejsca na podstawie danych adresowych.
+		</p>
+		<p>
+            Ta zakładka korzysta z usług udostępnionych przez stronę <a href="https://developer.here.com/" target="_blank" class="developer-here-com">'developer.here.com'</a>.
+			<div class="form-group row">
+				<label for="identyfikatorAplikacji" class="col-md-3 control-label text-nowrap">Identyfikator aplikacji ('App ID') :</label>
+				<div class="col-md-4">
+					<input type="text" class="form-control" id="identyfikatorAplikacji" placeholder="Identyfikator aplikacji ('App ID')">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="kodAplikacji" class="col-md-3 control-label text-nowrap">Kod aplikacji ('App Code') :</label>
+				<div class="col-md-4">
+					<input type="text" class="form-control" id="kodAplikacji" placeholder="Kod aplikacji ('App Code')">
+				</div>
+			</div>
+		</p>
+		<!-- panel do wyszukiwania -->
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h4 class="panel-title">Dane adresowe interesującego Cię miejsca</h4>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal" action="#" id="formZnajdzDlugoscISzerokosc" >
+					<div class="form-group row">
+						<label for="inputWojewodztwo" class="col-md-2 control-label">Województwo :</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="inputWojewodztwo" placeholder="Województwo">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputMiasto" class="col-md-2 control-label">Miasto :</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="inputMiasto" placeholder="Miasto">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputUlicaNazwa" class="col-md-2 control-label">Nazwa ulicy :</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="inputUlicaNazwa" placeholder="Ulica">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="inputNrDomu" class="col-md-2 control-label">Numer domu :</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="inputNrDomu" placeholder="Numer domu">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-10">
+							<button type="submit" class="btn btn-default btn-info" id="btnZnajdzDlugoscISzerokosc">
+								Znajdź długość i szerokość geograficzną
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- panel z wynikami wyszukiwania -->
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h4 class="panel-title">Długość i szerokość geograficzna szukanego miejsca</h4>
+			</div>
+			<div class="panel-body">
+				<div class="form-group row">
+					  <label for="inputZnalezionaDlGeogr" class="col-md-4 control-label text-nowrap">Znaleziona długość geograficzna (pole jest nieedytowalne) :</label>
+					  <div class="col-md-4">
+						<input type="text" class="form-control" id="inputZnalezionaDlGeogr" placeholder="Znaleziona długość geograficzna (np. 18.674802)" readonly>
+					  </div>
+				</div>
+				<div class="form-group row">
+					  <label for="inputZnalezionaSzerGeogr" class="col-md-4 control-label text-nowrap">Znaleziona szerokość geograficzna (pole jest nieedytowalne) :</label>
+					  <div class="col-md-4">
+						<input type="text" class="form-control" id="inputZnalezionaSzerGeogr" placeholder="Znaleziona szerokość geograficzna (np. 53.030415)" readonly>
+					  </div>
+				</div>
+			</div>
+		</div>
+</script>

@@ -1,0 +1,89 @@
+<script id="trzeciaZakladka" type="text/html">
+    <h3 class="text-center">
+        Wyznacz trasę z miejsca początkowego do miejsca docelowego.
+    </h3>
+    
+    <!-- srodek lokomocji -->
+    <div class="form-group row">
+        <label for="srodekLokomocji" class="col-md-3 text-nowrap">Środek lokomocji :</label>
+        <div class="col-md-3">
+            <select name="srodekLokomocji" id="srodekLokomocji" class="form-control">
+                <option value="none" readonly class="opcja-wybierz">-- Wybierz środek lokomocji (pojedynczy wybór) --</option>     
+                <option value="car">samochód</option>
+                <option value="bicycle">rower</option>
+                <option value="pedestrian">pieszo</option>
+            </select>
+        </div>
+    </div>
+    
+    <!-- typ trasy -->
+    <div class="form-group row">
+        <label for="typTrasy" class="col-md-3 text-nowrap">Typ trasy :</label>
+        <div class="col-md-3">
+            <select name="typTrasy" id="typTrasy" class="form-control">
+                <option value="none" readonly class="opcja-wybierz">-- Wybierz typ trasy (pojedynczy wybór) --</option>     
+                <option value="shortest">krótka</option>
+                <option value="fastest">szybka</option>
+                <option value="balanced">zbalansowana</option>
+            </select>
+        </div>
+    </div>
+    
+    <h3>Miejsce startowe :</h3>
+    <table class="table table-bordered table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Województwo</th>
+                <th>Miasto</th>
+                <th>Nazwa ulicy</th>
+                <th>Numer domu</th>
+                <th>Dlugosc geograficzna</th>
+                <th>Szerokosc geograficzna</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaDostepneTrasyStart">
+            <!-- wypelnionane w JS -->
+        </tbody>
+    </table>
+    
+    <h3>Lista miejsc docelowych :</h3>
+    <table class="table table-bordered table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Kolejny numer</th>
+                <th>Nazwa</th>
+                <th>Adres</th>
+                <th>Odległość (metry)</th>
+                <th>Nazwa kategorii</th>
+                <th>Wybierz miejsce (długość / szerokość geograficzna)</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaDostepneTrasyKoniec">
+            <!-- wypelnionane w JS -->
+        </tbody>
+    </table>
+    
+    <button type="button" class="btn btn-default btn-info col-md-2 col-md-offset-3" id="btnPokazTrase">Pokaż informacje o trasie</button>
+    
+    <div class="col-md-12">
+        <h4>Opis trasy :</h4>
+        <p id="opisTrasy"></p>
+
+        <h4>Miejsce startowe :</h4>
+        <p id="miejsceStartowe"></p>
+
+        <h3>Punkty trasy</h3>
+
+        <table class="table table-bordered table-striped table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Kolejny numer</th>
+                    <th>Jak jechać</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaJakJechac">
+                <!-- wypelnionane w JS -->
+            </tbody>
+        </table>
+    </div>
+</script>

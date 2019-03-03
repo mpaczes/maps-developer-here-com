@@ -1,0 +1,106 @@
+<script id="drugaZakladka" type="text/html">
+		<h3 class="text-center">
+			Wyszukaj ciekawe miejsca w pobliżu poszukiwanego obiektu.
+		</h3>
+		<p>
+			W tej zakładce można znaleźć, na podstawie znalezionej długości i szerokości geograficznej, ciekawe miejsca w pobliżu poszukiwanego celu.
+		</p>
+		<p>
+			Po kliknięciu na tą zakładkę długość i szerokość geograficzna zostaną skopiowane automatycznie z pierwszej zakładki.
+		</p>
+		<div class="panel panel-info">
+		  <div class="panel-heading">
+				<h4 class="panel-title">Poszukiwany cel i jego dane adresowe</h4>
+		  </div>
+		  <div class="panel-body">
+			  <div class="form-group col-md-2">
+				<label for="inputWojewodztwoSecondTab">Województwo</label>
+				<input type="text" class="form-control" id="inputWojewodztwoSecondTab" placeholder="Województwo" readonly>
+			  </div>
+			   <div class="form-group col-md-2">
+				<label for="inputMiastoSecondTab">Miasto</label>
+				<input type="text" class="form-control" id="inputMiastoSecondTab" placeholder="Miasto" readonly>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputNazwaUlicySecondTab">Nazwa ulicy</label>
+				<input type="text" class="form-control" id="inputNazwaUlicySecondTab" placeholder="Nazwa ulicy" readonly>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputNumerDomuSecondTab">Numer domu</label>
+				<input type="text" class="form-control" id="inputNumerDomuSecondTab" placeholder="Numer domu" readonly>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputDlugoscGeograficznaSecondTab">Długość geograficzna</label>
+				<input type="text" class="form-control" id="inputDlugoscGeograficznaSecondTab" placeholder="Długość geograficzna" readonly>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputSzerokoscGeograficznaSecondTab">Szerokość geograficzna</label>
+				<input type="text" class="form-control" id="inputSzerokoscGeograficznaSecondTab" placeholder="Szerokość geograficzna" readonly>
+			  </div>
+			  <div class="form-group row">
+				<label for="selectTypPoszukiwanychObiektow" class="col-md-3 text-nowrap">Typ poszukiwanych obiektów :</label>
+				<div class="col-md-3">
+					<select name="selectTypPoszukiwanychObiektow" id="selectTypPoszukiwanychObiektow" class="form-control" multiple>
+						<option value="none" readonly class="opcja-wybierz">-- Wybierz opcje (wielokrotny wybór) --</option>     
+						<option value="pharmacy">apteka</option>
+						<option value="atm-bank-exchange">bank</option>
+						<option value="library">biblioteka</option>
+						<option value="travel-agency">biuro podrózy</option>
+						<option value="railway-station">dworzec kolejowy</option>
+						<option value="hotel">hotel</option>
+						<option value="hostel">hostel</option>
+						<option value="cinema">kino</option>
+						<option value="bookshop">księgarnia</option>
+						<option value="religious-place">kosciół</option>
+						<option value="airport">lotnisko</option>
+						<option value="motel">motel</option>
+						<option value="museum">muzeum</option>
+						<option value="zoo">ogród zoologiczny</option>
+						<option value="taxi-stand">postój taksówek</option>
+						<option value="restaurant">restauracja</option>
+						<option value="petrol-station">stacja benzynowa</option>
+						<option value="shop">sklep (ogólnie)</option>
+						<option value="mall">supermarket</option>
+						<option value="hospital">szpital</option>
+						<option value="fire-department">straż pożarna</option>
+						<option value="post-office">urząd pocztowy</option>
+						<option value="car-dealer-repair">warsztat samochodowy</option>   
+					</select>
+				  </div>
+			  </div>
+			  <div class="form-group row">
+				  <label for="obszarPoszukiwan" class="col-md-3 text-nowrap">Obszar poszukiwań (w metrach) :</label>
+				  <div class="col-md-2">
+					<input type="number" min="1000" max="10000" step="500" id="obszarPoszukiwan" class="form-control" value="1000">
+				  </div>  
+			  </div>
+			  <div class="col-md-2 col-md-offset-3">
+				  <button type="button" class="btn btn-default btn-info" id="btnMiejscaWPoblizu">Pokaż dostępne miejsca w pobliżu</button>
+			  </div>
+		  </div>
+		</div>
+		<div class="panel panel-success">
+		  <div class="panel-heading">
+				<h4 class="panel-title">Miejsca w pobliżu</h4>
+		  </div>
+		  <div class="panel-body">
+			<table class="table table-bordered table-striped table-hover table-condensed" id="tableMiejscaWPoblizu">
+				<thead>
+				 <tr>
+					  <th>Kolejny numer</th>
+					  <th>Nazwa</th>
+					  <th>Adres</th>
+					  <th>Odległość (metry)</th>
+					  <th>Nazwa kategorii</th>
+					  <th>Identyfikator kategorii</th>
+                      <th>Długość geograficzna</th>
+					  <th>Szerokość geograficzna</th>
+				  </tr>
+				</thead>
+				<tbody id="tableBodyMiejscaWPoblizu">
+					<!-- wypelniane w JS -->
+				</tbody>
+			</table>
+			</div>
+		</div>
+</script>
