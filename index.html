@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Aplikacja z Bootstrapem i Google API</title>
+
+    <meta name="description" content="Aplikacja z Bootstrapem i Google API -- wyszukaj miejsce, miejsca w poblizu i znajdz informacje o trasie.">
+    <meta name="author" content="Marek Paczesny">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- mapy ze strony 'developer.here.com' -->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1542186754" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tabbable" id="tabsGlownaZakladka">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item active">
+                            <a class="nav-link active show" href="#tabMiejsceInfo" data-toggle="tab">Długość i szerokość geograficzna miejsca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tabDostepneMiejsca" data-toggle="tab">Ciekawe miejsca w pobliżu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tabOsiagalneTrasy" data-toggle="tab">Dostępne trasy ze znalezionego miejsca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tabOsiagalneTrasyNaMapie" data-toggle="tab">Mapa z wybraną trasą</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- pierwsza zakladka -->
+                        <div class="tab-pane active" id="tabMiejsceInfo">
+                            <!-- mustache to wypelni -->
+                        </div>
+                        <!-- druga zakladka -->
+                        <div class="tab-pane" id="tabDostepneMiejsca">
+                            <!-- mustache to wypelni -->
+                        </div>
+                        <!-- trzecia zakladka -->
+                        <div class="tab-pane" id="tabOsiagalneTrasy">
+                            <!-- mustache to wypelni -->
+                        </div>
+                        <!-- czwarta zakladka -->
+                        <div class="tab-pane" id="tabOsiagalneTrasyNaMapie">
+                            <!-- mustache to wypelni -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- jQuery-Mustache - A jQuery Plugin for working with Mustache.js -->
+    <script src="js/jquery.mustache.js"></script>
+    <!-- biblioteka Mustache.js -->
+    <script src="js/mustache.js"></script>
+    
+    <!-- pierwsza zakladka dzieki blbiotece mustache.js -->
+    <script>
+        var firstTabData = {};
+        $.Mustache.load('./templates/zakladkaNumerJeden.html')
+            .done(function () {
+                $('#tabMiejsceInfo').mustache('pierwszaZakladka', firstTabData);
+            });
+    </script>
+    
+    <!-- druga zakladka dzieki blbiotece mustache.js -->
+    <script>
+        var secondTabData = {};
+        $.Mustache.load('./templates/zakladkaNumerDwa.html')
+            .done(function () {
+                $('#tabDostepneMiejsca').mustache('drugaZakladka', secondTabData);
+            });
+    </script>
+    
+    <!-- trzecia zakladka dzieki blbiotece mustache.js -->
+    <script>
+        var thirdTabData = {};
+        $.Mustache.load('./templates/zakladkaNumerTrzy.html')
+            .done(function () {
+                $('#tabOsiagalneTrasy').mustache('trzeciaZakladka', thirdTabData);
+            });
+    </script>
+    
+    <!-- czwarta zakladka dzieki blbiotece mustache.js -->
+    <script>
+        var fourthTabData = {};
+        $.Mustache.load('./templates/zakladkaNumerCztery.html')
+            .done(function () {
+                $('#tabOsiagalneTrasyNaMapie').mustache('czwartaZakladka', fourthTabData);
+            });
+    </script>
+</body>
+
+</html>
