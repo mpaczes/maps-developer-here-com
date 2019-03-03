@@ -1,0 +1,61 @@
+body {
+    background-color: burlywood;
+}
+
+a.nav-link {
+    font-size: 1.5em;
+}
+
+.panel-body {
+    background-color: cadetblue;
+}
+
+input[type=text], .form-control[type=number], select.form-control {
+    background-color: bisque;
+}
+
+.form-control[readonly] {
+    background-color: darkolivegreen;
+    color: white;
+    font-size: 1.5em;
+}
+
+table thead tr {
+    background-color: #a5910a;
+}
+
+.kolejny-numer {
+    text-align: right;
+}
+
+.developer-here-com {
+    color: #337ab7;
+    font-weight: bold;
+}
+
+.developer-here-com:link, .developer-here-com:visited, .developer-here-com:hover, .developer-here-com:active {
+    text-decoration: none;
+}
+
+td .heading, td .direction, td .street, td .next-street, td .exit, td .distance-description .length {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+span.direction, span.next-street, span.distance-description span.length, span.heading, span.street {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+p .length, p .time, div span.length, div span.time {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+select option.opcja-wybierz {
+    font-weight: bold;
+}
+
+button#btnPokazTraseNaMapie {
+    margin-bottom: 20px;
+}
